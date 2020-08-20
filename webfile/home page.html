@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        html {
+            background: rgb(97, 96, 96);
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+      .top-nav {
+           color:white;
+      }
+      .top-nav div {
+           display: inline-block;
+           
+      }
+     .top-nav div a {
+                text-decoration: none;
+                color:white;
+                font-size: 19px;
+     }
+     .top-nav a:hover {
+            font-size: 21px;
+            transition: .4s;
+     }
+     .top-nav input {
+             height:35px;
+             width:600px;
+             border: 1px solid black;
+             border-radius: 50px;
+             padding-left: 15px;
+            
+        }
+     .top-nav input:hover {
+         box-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+     }
+        .top-nav .input {
+             position: relative;
+             right: -125px;
+        }
+        .top-nav .input button {
+            position: relative;
+            left: -38px;
+            top: 1px;
+            font-size: 16px;
+            background: white;
+            border: none;
+        }
+        .top-nav .top-logo {
+            text-transform: uppercase;
+            color: white;
+            position: relative;
+            right: -66px;
+        }
+    .cart {
+        position: relative;
+        right:-50px;
+    }
+    .heart {
+        position: relative;
+        right:-210px;
+    }
+    .user {
+        position:relative;
+        right:-157px;
+    }
+    nav .nav-menu {
+          display: grid;
+          grid-template-columns: repeat(9,1fr);
+          background:lightblue;
+          text-transform: uppercase;
+          box-shadow: 0px 3px 6px rgba(0,0,0,0.7);
+          text-align: center;
+      }
+      nav .nav-menu > div {
+          padding: 10px 25px;
+          font-size: 17px;
+        
+         
+      }
+      nav .nav-menu > div:hover {
+             background:rgb(35, 137, 172);
+      }
+      nav .nav-menu > div > a {
+           text-decoration: none;
+           color: black;
+        
+
+      }
+      .down-for-newin {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       height: 390px;
+       width: 1240px;
+       background:rgb(35, 137, 172);
+       color: black;
+       font-size: 17px;
+       text-transform: uppercase;
+       z-index: 9999;
+       position: absolute;
+       top: 40px;
+       left:0px;
+       display: none;
+   }
+  .down-for-newin .list div{
+       padding: 10px 36px;
+       text-transform: uppercase;
+       text-align: left;
+      
+   }
+.down-for-newin .list div a::after {
+       content:'';
+       width: 0;
+       height: 2px;
+       background: white;
+       transition: width .2s;
+       display: block;
+   }
+.down-for-newin .list div a:hover::after {
+          width: 100%;
+   }
+  
+.down-for-newin .list div  a {
+       text-decoration: none;
+       color: black;
+       display: inline-block;
+   }
+   .down-for-newin .side {
+       background: url('feet.jpg');
+       background-repeat: no-repeat;
+       background-position: center;
+       margin: 4px;
+       border-radius: 5px;
+   }
+   .down-for-newin .side .labels {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 115px;
+         left:145px;
+         border-radius: 5px;
+
+   }
+   .side .labels h4 {
+       margin-top:0;
+   }
+   .side .labels h1 {
+       margin-bottom:0;
+   }
+   .newin {
+       position: relative;
+   }
+   .newin:hover .down-for-newin {
+       display: grid;
+   }
+   .down-for-bags {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       height: 390px;
+       width: 1240px;
+       background:rgb(35, 137, 172);
+       color: black;
+       font-size: 17px;
+       text-transform: uppercase;
+       z-index: 9999;
+       text-align: left;
+       position: absolute;
+       top: 40px;
+       left: -835px;
+       display: none;
+   }
+   .down-for-bags .list div{
+       padding: 10px 36px;
+       text-transform: uppercase;
+      
+   }
+   .down-for-bags .list div  a {
+       text-decoration: none;
+       color: black;
+       display: inline-block;
+   }
+   .down-for-bags .side {
+       background: url('feet.jpg');
+       background-position: center;
+       margin: 4px;
+       border-radius: 5px;
+
+   }
+.down-for-bags .side .labels {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 115px;
+         left:145px;
+         border-radius: 5px;
+
+   }
+   .down-for-bags .list div a::after {
+       content:'';
+       width: 0;
+       height: 2px;
+       background: white;
+       transition: width .2s;
+       display: block;
+   }
+   .down-for-bags .list div a:hover::after {
+          width: 100%;
+   }
+.bags {
+    position: relative;
+}
+.bags:hover .down-for-bags {
+    display: grid;
+}
+.down-for-accessories {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       height: 390px;
+       width: 1240px;
+       background:rgb(35, 137, 172);
+       color: black;
+       text-align: left;
+       font-size: 17px;
+       text-transform: uppercase;
+       position: absolute;
+       top: 40px;
+       right: -540px;
+       z-index: 9999; 
+       display: none;
+
+   }
+   .down-for-accessories .list div{
+       padding: 10px 36px;
+       text-transform: uppercase;
+      
+   }
+   .down-for-accessories .list div  a {
+       text-decoration: none;
+       color: black;
+       display: inline-block;
+   }
+   .down-for-accessories .side {
+       background: url('watch.jpg');
+       background-position: center;
+       margin: 4px;
+       border-radius: 5px;
+
+   }
+.down-for-accessories .side .labels {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 115px;
+         left:145px;
+         border-radius: 5px;
+
+   }
+   .down-for-accessories .labels h4 {
+       margin-top:0;
+   }
+   .down-for-accessories .labels h1 {
+       margin-bottom:0;
+   }
+   .down-for-accessories .list div a::after {
+       content:'';
+       width: 0;
+       height: 2px;
+       background: white;
+       transition: width .2s;
+       display: block;
+   }
+   .down-for-accessories .list div a:hover::after {
+          width: 100%;
+   }
+   .accessories {
+       position: relative;
+   }
+   .accessories:hover .down-for-accessories {
+       display: grid;
+   }
+   .down-for-shirts {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       height: 390px;
+       width: 1240px;
+       background:#2389ac;
+       color: black;
+       text-align: left;
+       font-size: 17px;
+       text-transform: uppercase;
+       position: absolute;
+       top:40px;
+       left: -134px;
+       z-index: 9999;
+       display: none;
+
+   }
+   .down-for-shirts .list div{
+       padding: 10px 36px;
+       text-transform: uppercase;
+      
+   }
+   .down-for-shirts .list div  a {
+       text-decoration: none;
+       color: black;
+       display: inline-block;
+   }
+   .down-for-shirts .side {
+       background: url('feet.jpg');
+       background-position: center;
+       margin: 4px;
+       border-radius: 5px;
+
+   }
+.down-for-shirts .side .labels {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 115px;
+         left:145px;
+         border-radius: 5px;
+
+   }
+   .down-for-shirts .labels h4 {
+       margin-top:0;
+   }
+   .down-for-shirts .labels h1 {
+       margin-bottom:0;
+   }
+   .down-for-shirts .list div a::after {
+       content:'';
+       width: 0;
+       height: 2px;
+       background: white;
+       transition: width .2s;
+       display: block;
+   }
+   .down-for-shirts .list div a:hover::after {
+          width: 100%;
+   }
+   .shirts {
+       position: relative;
+   }
+   .shirts:hover .down-for-shirts {
+       display: grid;
+   }
+   .down-for-t-shirts {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       height: 390px;
+       width: 1240px;
+       background:rgb(35, 137, 172);
+       color: black;
+       text-align: left;
+       font-size: 17px;
+       text-transform: uppercase;
+       position: absolute;
+       top: 40px;
+       left: -268px;
+       display: none;
+       z-index: 9999;
+       
+   }
+   .down-for-t-shirts .list div{
+       padding: 10px 36px;
+       text-transform: uppercase;
+      
+   }
+   .down-for-t-shirts .list div  a {
+       text-decoration: none;
+       color: black;
+       display: inline-block;
+   }
+   .down-for-t-shirts .side {
+       background: url('feet.jpg');
+       background-position: center;
+       margin: 4px;
+       border-radius: 5px;
+
+   }
+.down-for-t-shirts .side .labels {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 115px;
+         left:145px;
+         border-radius: 5px;
+
+   }
+   .down-for-t-shirts .labels h4 {
+       margin-top:0;
+   }
+   .down-for-t-shirts .labels h1 {
+       margin-bottom:0;
+   }
+   .down-for-t-shirts .list div a::after {
+       content:'';
+       width: 0;
+       height: 2px;
+       background: white;
+       transition: width .2s;
+       display: block;
+   }
+   .down-for-t-shirts .list div a:hover::after {
+          width: 100%;
+   }
+   .t-shirts {
+       position: relative;
+   }
+   .t-shirts:hover .down-for-t-shirts {
+       display: grid;
+   }
+   .down-for-totals {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       height: 390px;
+       width: 1240px;
+       background:rgb(35, 137, 172);
+       color: black;
+       text-align: left;
+       font-size: 17px;
+       text-transform: uppercase;
+       position: absolute;
+       top:40px; 
+       right: -405px;
+       display: none;
+       z-index: 9999;
+   }
+   .down-for-totals .list div{
+       padding: 10px 36px;
+       text-transform: uppercase;
+      
+   }
+   .down-for-totals .list div  a {
+       text-decoration: none;
+       color: black;
+       display: inline-block;
+   }
+   .down-for-totals .side {
+       background: url('pants.jpg');
+       background-position: center;
+       margin: 4px;
+       border-radius: 5px;
+
+   }
+.down-for-totals .side .labels {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 115px;
+         left:145px;
+         border-radius: 5px;
+
+   }
+   .down-for-totals .labels h4 {
+       margin-top:0;
+   }
+   .down-for-totals .labels h1 {
+       margin-bottom:0;
+   }
+   .down-for-totals .list div a::after {
+       content:'';
+       width: 0;
+       height: 2px;
+       background: white;
+       transition: width .2s;
+       display: block;
+   }
+   .down-for-totals .list div a:hover::after {
+          width: 100%;
+   }
+   .totals {
+       position: relative;
+   }
+   .totals:hover .down-for-totals {
+       display: grid;
+   }
+    
+   .down-for-trousers {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       height: 390px;
+       width: 1240px;
+       background:rgb(35, 137, 172);
+       color: black;
+       text-align: left;
+       font-size: 17px;
+       text-transform: uppercase;
+       position: absolute;
+       top: 40px;
+       right: -134px;
+       z-index: 9999;
+       display: none;
+   }
+   .down-for-trousers .list div{
+       padding: 10px 36px;
+       text-transform: uppercase;
+      
+   }
+   .down-for-trousers .list div  a {
+       text-decoration: none;
+       color: black;
+       display: inline-block;
+   }
+   .down-for-trousers .side {
+       background: url('jeans3.jpg');
+       background-position: center;
+       margin: 4px;
+       border-radius: 5px;
+
+   }
+.down-for-trousers .side .labels {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 115px;
+         left:145px;
+         border-radius: 5px;
+
+   }
+   .down-for-trousers .labels h4 {
+       margin-top:0;
+   }
+   .down-for-trousers .labels h1 {
+       margin-bottom:0;
+   }
+   .down-for-trousers .list div a::after {
+       content:'';
+       width: 0;
+       height: 2px;
+       background: white;
+       transition: width .2s;
+       display: block;
+   }
+   .down-for-trousers .list div a:hover::after {
+          width: 100%;
+   }
+   .trousers {
+       position: relative;
+   }
+   .trousers:hover .down-for-trousers {
+       display: grid;
+   }
+   .down-for-shoes {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       height: 390px;
+       width: 1240px;
+       background:rgb(35, 137, 172);
+       color: black;
+       font-size: 17px;
+       text-align: left;
+       text-transform: uppercase;
+       position: absolute;
+       top: 40px;
+       right:0;
+       z-index: 9999;
+       display: none;
+   }
+   .down-for-shoes .list div{
+       padding: 10px 36px;
+       text-transform: uppercase;
+      
+   }
+   .down-for-shoes .list div  a {
+       text-decoration: none;
+       color: black;
+       display: inline-block;
+   }
+   .down-for-shoes .side {
+       background: url('shooe.jpg');
+       background-position: center;
+       margin: 4px;
+       border-radius: 5px;
+
+   }
+.down-for-shoes .side .labels {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 115px;
+         left:145px;
+         border-radius: 5px;
+
+   }
+   .down-for-shoes .labels h4 {
+       margin-top:0;
+   }
+   .down-for-shoes .labels h1 {
+       margin-bottom:0;
+   }
+   .down-for-shoes .list div a::after {
+       content:'';
+       width: 0;
+       height: 2px;
+       background: white;
+       transition: width .2s;
+       display: block;
+   }
+   .down-for-shoes .list div a:hover::after {
+          width: 100%;
+   }
+   .shoes {
+       position: relative;
+   }
+   .shoes:hover .down-for-shoes {
+       display: grid;
+   }
+   .down-for-suits {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       height: 390px;
+       width: 1240px;
+       background:rgb(35, 137, 172);
+       color: black;
+       font-size: 17px;
+       text-align: left;
+       text-transform: uppercase;
+       position: absolute;
+       top: 40px;
+       left: -403px;
+       z-index: 9999;
+       display: none;
+   }
+   .down-for-suits .list div{
+       padding: 10px 36px;
+       text-transform: uppercase;
+      
+   }
+   .down-for-suits .list div  a {
+       text-decoration: none;
+       color: black;
+       display: inline-block;
+   }
+   .down-for-suits .side {
+       background: url('fashion_suit.jpg');
+       background-position: center;
+       margin: 4px;
+       border-radius: 5px;
+
+   }
+.down-for-suits .side .labels {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 115px;
+         left:145px;
+         border-radius: 5px;
+
+   }
+   .down-for-suits .labels h4 {
+       margin-top:0;
+   }
+   .down-for-suits .labels h1 {
+       margin-bottom:0;
+   }
+   .down-for-suits .list div a::after {
+       content:'';
+       width: 0;
+       height: 2px;
+       background: white;
+       transition: width .2s;
+       display: block;
+   }
+   .down-for-suits .list div a:hover::after {
+          width: 100%;
+   }
+   .suits {
+       position: relative;
+   }
+   .suits:hover .down-for-suits {
+       display: grid;
+   }
+
+   .top-image {
+       margin:10px;
+       background:url('okay.jpg');
+       background-position: center;
+       min-height:500px;
+       text-transform: uppercase;
+   }
+   .top-image .labels {
+             background: rgba(0,0,0,0.8);
+             max-width: 400px;
+             height:300px;
+             text-align:center;
+             position:relative;
+             top: 95px;
+             left:50px;
+             color: white;
+   }
+   .top-image .labels h1 {
+       padding-top: 60px;
+       margin-bottom: 0;
+   }
+   .top-image .labels .btn {
+      text-decoration: none;
+      color: white;
+      padding:10px;
+      background:black;
+   }
+   .top-image .labels .btn:active {
+       color: lightblue;
+   }
+   .top-image .labels h4 {
+             margin-top: 0;
+   }
+    </style>
+</head>
+<body>
+      <nav class="top-nav">
+          <div class="top-logo"><h2>easy-fashion</h2></div>
+          <div class="input"><input type="text" placeholder="search here for items and category">
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+          </div>
+              <div class="user"><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i></a></div>
+              <div class="heart"><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a><div>
+              <div class="cart"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        </nav> 
+        <nav>
+                <div class="nav-menu">
+                    <div class="newin"><a href="#">new in</a>
+                        <div class="down-for-newin">
+                                <div class="list">
+                                      <div><a href="#">bags</a></div>
+                                      <div><a href="#">suits</a></div>
+                                      <div><a href="#">shoes</a></div>
+                                      <div><a href="#">shirts</a></div>
+                                      <div><a href="#">totals</a></div>
+                                      <div><a href="#">tshirts</a></div>
+                                      <div><a href="#">fashion</a></div>
+                                      <div><a href="#">trousers</a></div>
+                                      <div><a href="#">accessories</a></div>
+                                </div>
+                                <div class="side">
+                                    <div class="labels">
+                                        <h1>get your styles now</h1>
+                                        <h4>dive to see more</h4>
+                                    </div>
+                                </div>
+                         </div> 
+                    </div>
+                    <div class="shirts"><a href="#">shirts</a>
+                        <div class="down-for-shirts">  
+                                <div class="list">
+                                            <div><a href="#">new in</a></div>
+                                            <div><a href="#">long-hands</a></div>
+                                            <div><a href="#">shorts-hands</a></div>
+                                    </div>
+                                    <div class="side">
+                                        <div class="labels">
+                                            <h1>be the best version of your own</h1>
+                                            <h4>everyday is fashion</h4>
+                                        </div>
+                                        
+                                    </div>
+                              </div> 
+                    </div>
+                    <div class="t-shirts"><a href="#">tshirts</a>
+                        <div class="down-for-t-shirts">  
+                                 <div class="list">
+                                          <div><a href="#">new in</a></div>
+                                          <div><a href="#">black</a></div>
+                                          <div><a href="#">white</a></div>
+                                          <div><a href="#">blue</a></div>
+                                          <div><a href="#">yellow</a></div>
+                                          <div><a href="#">red</a></div>
+                                  </div>
+                                  <div class="side">
+                                        <div class="labels">
+                                            <h1>styling yourself is knowledge</h1>
+                                            <h4>everyday is fashion</h4>
+                                        </div>
+                                        
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="suits"><a href="#">suits</a>
+                        <div class="down-for-suits">  
+                                <div class="list">
+                                            <div><a href="#">new in</a></div>
+                                            <div><a href="#">all available</a></div>
+                                    </div>
+                                    <div class="side">
+                                            <div class="labels">
+                                                <h1>look here for top classic shoes</h1>
+                                                <h4>all at top discounts</h4>
+                                            </div>
+                                            
+                                        </div>
+                              </div>
+                    </div>
+                    <div class="accessories"><a href="#">accessories</a>
+                        <div class="down-for-accessories">  
+                                <div class="side">
+                                      <div class="labels">
+                                          <h1>styling yourself is knowledge</h1>
+                                          <h4>everyday is fashion</h4>
+                                      </div>
+                                      
+                                  </div>
+                                 <div class="list">
+                                          <div><a href="#">belts</a></div>
+                                          <div><a href="#">watches</a></div>
+                                          <div><a href="#">chains</a></div>
+                                          <div><a href="#">glasses</a></div>
+                                          <div><a href="#">bleslates</a></div>
+                                  </div>
+                                 
+                            </div>
+                    </div>
+                    <div class="totals"><a href="#">totals</a>
+                        <div class="down-for-totals">  
+                                <div class="side">
+                                      <div class="labels">
+                                          <h1>styling yourself is knowledge</h1>
+                                          <h4>everyday is fashion</h4>
+                                      </div>
+                                      
+                                  </div>
+                                 <div class="list">
+                                          <div><a href="#">new in</a></div>
+                                          <div><a href="#">casual</a></div>
+                                          <div><a href="#">official</a></div>
+                                  </div>
+                                 
+                            </div>    
+                    </div>
+                    <div class="bags"><a href="#">bags</a>
+                        <div class="down-for-bags">
+                                <div class="side">
+                                        <div class="labels">
+                                            <h1>we provide you with different styles</h1>
+                                        </div>
+                                        
+                                    </div>
+                                <div class="list">
+                                        <div><a href="#">new in</a></div>
+                                        <div><a href="#">casual</a></div>
+                                        <div><a href="#">official</a></div>
+                                </div>
+                          </div> 
+                    </div>
+                    <div class="trousers"><a href="#">trousers</a>
+                        <div class="down-for-trousers">  
+                                <div class="side">
+                                      <div class="labels">
+                                          <h1>styling yourself is knowledge</h1>
+                                          <h4>everyday is fashion</h4>
+                                      </div>
+                                      
+                                  </div>
+                                 <div class="list">
+                                          <div><a href="#">type 1</a></div>
+                                          <div><a href="#">type 2</a></div>
+                                          <div><a href="#">type 3</a></div>
+                                          <div><a href="#">type 4</a></div>
+                                          <div><a href="#">type 5</a></div>
+                                          <div><a href="#">type 6</a></div>
+                                  </div>
+                                 
+                            </div>   
+                    </div>
+                    <div class="shoes"><a href="#">shoes</a>
+                        <div class="down-for-shoes"> 
+                                <div class="side">
+                                        <div class="labels">
+                                            <h1>look here for top classic shoes</h1>
+                                            <h4>all at top discounts</h4>
+                                        </div>
+                                        
+                                    </div> 
+                                <div class="list">
+                                            <div><a href="#">new in</a></div>
+                                            <div><a href="#">official</a></div>
+                                            <div><a href="#">loafers</a></div>
+                                            <div><a href="#">sandals</a></div>
+                                            <div><a href="#">sneakers</a></div>
+            
+                                    </div>
+                              </div>
+                    </div>
+                </div>
+            </nav>
+      
+      
+      <div class="top-image">
+            <div class="labels">
+                <h1>overtake the fashion kings</h1>
+                <h4>only for the stylish men</h4>
+                <a href="#" class="btn">new arrivals</a>
+            </div>
+        </div> 
+</body>
+</html>

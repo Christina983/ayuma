@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        html {
+            background: rgb(97, 96, 96);
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+             width: 100%;
+        }
+        .top-nav div {
+                  display:inline-block;
+                  text-transform: uppercase;
+                  padding: 0px 20px;
+        }
+        .top-nav .top-logo {
+            
+            color: white;
+        }
+        .top-nav input {
+             height:35px;
+             width:600px;
+             border: 1px solid black;
+             border-radius: 50px;
+             padding-left: 15px;
+        }
+        .top-nav .input {
+             position: relative;
+             right: -79px;
+        }
+        .top-nav .input button {
+            position: relative;
+            left: -38px;
+            top: 1px;
+            font-size: 16px;
+            background: white;
+            border: none;
+        }
+      .top-nav a {
+               text-decoration:none;
+               color: white;
+               font-size: 19px;
+      }
+      .top-nav a:hover {
+             color: black;
+                 
+      }
+      .top-nav a:active {
+               color:white;
+             
+      }
+      .top-nav .icons {
+            position: relative;
+            right: -62px;
+      }
+      .top-nav .icons div {
+           padding-left: 25px;
+      }
+    .bottom-nav {
+          background: lightblue;
+          box-shadow: 0px 3px 6px rgba(0,0,0,0.7);
+          font-size: 17px;
+          text-transform: uppercase;
+    }
+    .bottom-nav > div {
+        display: inline-block;
+         padding: 10px 25px;
+    }
+    .bottom-nav > div > a {
+        text-decoration:none;
+        display: block; 
+        color: black; 
+    }
+    .bottom-nav > div:hover {
+          background: rgb(107, 187, 214);
+          cursor: pointer;
+          color: black;
+          transition: .3s;
+    }
+    .bottom-nav > div a:active {
+          color:white;
+          transition: 0s;
+    }
+    .drop-newin {
+         background:rgb(107, 187, 214);;
+         display:grid;
+         grid-template-columns: repeat(2,1fr);
+         text-transform: uppercase;
+         font-size: 17px;
+         height: 350px;
+         width: 1800px;
+         position:absolute;
+         left: 0px;
+         top: 20px;
+         
+   
+         
+    }
+    .newin:hover .drop-newin {
+        display:grid;
+    }
+   
+    .newin {
+        position: relative;
+    }
+    .drop-newin .list > div > a {
+        text-decoration: none;
+        color: black;   
+    }
+    .drop-newin .list > div:hover {
+         text-decoration:underline;  
+    }
+    
+    .drop-newin .list > div > a:active {
+        color: black;  
+    }
+    .drop-newin .list > div {
+        padding: 10px 25px;
+    }
+    .drop-newin .image {
+        background:url('feet.jpg');
+        background-position: center;
+        margin: 5px;
+    }
+    .drop-newin .image .label {
+         width: 300px;
+         background: rgba(0,0,0,0.6);
+         color: white;
+         text-align: center;
+         position: relative;
+         top: 90px;
+         left:115px;
+
+        }
+        .drop-newin .image .label h4{
+         margin-top: 0;
+        }
+        .drop-newin .image .label h1{
+         margin-bottom: 0;
+        }
+    
+
+
+    
+      
+    </style>
+</head>
+<body>
+      <nav class="top-nav">
+          <div class="top-logo"><h2>easy-fashion</h2></div>
+          <div class="input"><input type="text" placeholder="search here for items and category">
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+          </div>
+          <div class="icons">
+              <div><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i></a></div>
+              <div><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a><div>
+              <div><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+          </div>
+        </nav>
+
+    <div class="bottom-nav">
+            <div><a href="#">fashion</a></div>
+            <div class="newin"><a href="#">new in</a>
+                <div class="drop-newin">
+                        <div class="list">
+                                  <div><a href="#">bags</a></div>
+                                  <div><a href="#">suits</a></div>
+                                  <div><a href="#">shoes</a></div>
+                                  <div><a href="#">shirts</a></div>
+                                  <div><a href="#">totals</a></div>
+                                  <div><a href="#">tshirts</a></div>
+                                  <div><a href="#">fashion</a></div>
+                                  <div><a href="#">trousers</a></div>
+                                  <div><a href="#">accessories</a></div>
+                        </div>
+                        <div class="image">
+                            <div class="label">
+                                 <h1>best classic looks ever</h1>
+                                <h4> at top discounts</h4>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div><a href="#">shirts</a></div>
+            <div><a href="#">tshirts</a></div>
+            <div><a href="#">shoes</a></div>
+            <div><a href="#">suits</a></div>
+            <div><a href="#">totals</a></div>
+            <div><a href="#">bags</a></div>
+            <div><a href="#">trousers</a></div>
+            <div><a href="#">accessories</a></div>
+    </div>
+  
+  
+</body>
+</html>
